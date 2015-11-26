@@ -6,7 +6,7 @@ package com.lvbo.guavatest.collect;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
-import com.lvbo.guavatest.functional.function.City;
+import com.lvbo.guavatest.functional.model.City;
 import org.junit.Test;
 
 import java.util.Collections;

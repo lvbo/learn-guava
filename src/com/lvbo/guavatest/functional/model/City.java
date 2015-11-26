@@ -2,7 +2,7 @@
  * 本代码的所有权和解释权归瑞斯康达科技发展有限公司所有
  * 1999,2014
  */
-package com.lvbo.guavatest.functional.function;
+package com.lvbo.guavatest.functional.model;
 
 import com.lvbo.guavatest.functional.predicate.Climate;
 

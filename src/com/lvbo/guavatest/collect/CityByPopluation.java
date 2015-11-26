@@ -5,7 +5,7 @@
 package com.lvbo.guavatest.collect;
 
 import com.google.common.primitives.Ints;
-import com.lvbo.guavatest.functional.function.City;
+import com.lvbo.guavatest.functional.model.City;
 
 import java.util.Comparator;
 

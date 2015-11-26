@@ -6,6 +6,8 @@ package com.lvbo.guavatest.functional.function;
 
 import com.google.common.base.Function;
 import com.google.common.base.Functions;
+import com.lvbo.guavatest.functional.model.City;
+import com.lvbo.guavatest.functional.model.State;
 import org.junit.Test;
 
 import java.util.*;
@@ -42,7 +44,7 @@ public class FunctionTest {
         stateMap.put("bbbb", state2);
 
         Function<String,State> lookup = Functions.forMap(stateMap);
-        Function<State, String> stateFunction = new StateToCityString();
+        Function<State, String> stateFunction = new StateToCityStringFunction();
         Function<String,String> composed = Functions.compose(stateFunction, lookup);
         System.out.println(composed.apply("aaaa"));
     }
