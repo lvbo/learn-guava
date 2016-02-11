@@ -4,8 +4,6 @@
  */
 package com.lvbo.guavatest.functional.model;
 
-import com.lvbo.guavatest.functional.predicate.Climate;
-
 /**
  * Àà¹¦ÄÜÃèÊö:
  * <ul>

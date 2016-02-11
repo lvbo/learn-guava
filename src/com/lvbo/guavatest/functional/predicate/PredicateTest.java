@@ -7,6 +7,7 @@ package com.lvbo.guavatest.functional.predicate;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.lvbo.guavatest.functional.model.City;
+import com.lvbo.guavatest.functional.model.Climate;
 import org.junit.Test;
 
 
