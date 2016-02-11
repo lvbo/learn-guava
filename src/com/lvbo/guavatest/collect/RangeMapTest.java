@@ -34,6 +34,7 @@ public class RangeMapTest {
         System.out.println("rangeMap:"+rangeMap);
         rangeMap.remove(Range.closed(5, 11));
         System.out.println("rangeMap:"+rangeMap);
+        System.out.println(rangeMap.get(3));
     }
 
 }

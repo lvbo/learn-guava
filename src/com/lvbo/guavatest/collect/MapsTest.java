@@ -36,6 +36,7 @@ public class MapsTest {
         }
         System.out.println(bookMap);
 
+        // 同上一样的效果
         Map<String,Book> bookMap1 = Maps.uniqueIndex(books.iterator(), new
                 Function<Book, String>() {
                     public String apply(Book input) {

@@ -55,14 +55,10 @@ public class FluentIterableTest {
                         return input.getAge() > 31;
                     }
                 });
-        assertThat(Iterables.contains(personsFilteredByAge, person2),
-                is(true));
-        assertThat(Iterables.contains(personsFilteredByAge, person4),
-                is(true));
-        assertThat(Iterables.contains(personsFilteredByAge, person1),
-                is(false));
-        assertThat(Iterables.contains(personsFilteredByAge, person3),
-                is(false));
+        assertThat(Iterables.contains(personsFilteredByAge, person2), is(true));
+        assertThat(Iterables.contains(personsFilteredByAge, person4), is(true));
+        assertThat(Iterables.contains(personsFilteredByAge, person1), is(false));
+        assertThat(Iterables.contains(personsFilteredByAge, person3), is(false));
     }
 
     @Test

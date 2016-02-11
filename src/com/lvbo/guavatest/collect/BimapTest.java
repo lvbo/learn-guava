@@ -35,6 +35,14 @@ public class BimapTest {
     }
 
     @Test
+    public void testKeyRepeat() {
+        BiMap<String,String> biMap = HashBiMap.create();
+        biMap.put("1","Tom");
+        biMap.put("1","Mt");
+        System.out.println(biMap);
+    }
+
+    @Test
     public void testBiMapForcePut() throws Exception {
         BiMap<String,String> biMap = HashBiMap.create();
         biMap.put("1","Tom");

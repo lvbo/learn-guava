@@ -38,8 +38,7 @@ public class SetsTest {
         System.out.println(setView);
 
         Sets.SetView<String> sv = Sets.intersection(s1,s2);
-        assertThat(sv.size()==2 && sv.contains("2") &&
-                sv.contains("3"),is(true));
+        assertThat(sv.size()==2 && sv.contains("2") && sv.contains("3"),is(true));
     }
 
     @Test
