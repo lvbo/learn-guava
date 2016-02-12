@@ -7,6 +7,7 @@ package com.lvbo.guavatest.eventbus;
 import com.google.common.eventbus.EventBus;
 import org.junit.Test;
 
+
 /**
  * Àà¹¦ÄÜÃèÊö:
  * <ul>
@@ -31,6 +32,5 @@ public class TestEventBus {
         eventBus.post(new TestEvent(400));
 
         System.out.println("LastMessage:"+listener.getLastMessage());
-        ;
     }
 }
