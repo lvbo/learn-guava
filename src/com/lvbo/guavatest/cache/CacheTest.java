@@ -4,13 +4,10 @@
  */
 package com.lvbo.guavatest.cache;
 
-import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import org.junit.Test;
-
-import java.util.concurrent.Callable;
 
 /**
  * ¿‡π¶ƒ‹√Ë ˆ:
@@ -39,7 +36,7 @@ public class CacheTest {
 
                 });
 
-        System.out.println("jerry value:" + cahceBuilder.apply("jerry"));
+        cahceBuilder.refresh("jerry");
         System.out.println("jerry value:" + cahceBuilder.get("jerry"));
         System.out.println("peida value:" + cahceBuilder.get("peida"));
         System.out.println("peida value:" + cahceBuilder.apply("peida"));
@@ -47,25 +44,4 @@ public class CacheTest {
         cahceBuilder.put("harry", "ssdded");
         System.out.println("harry value:" + cahceBuilder.get("harry"));
     }
-
-    @Test
-    public void testcallableCache() throws Exception {
-        Cache<String, String> cache = CacheBuilder.newBuilder().maximumSize(1000).build();
-        String resultVal = cache.get("jerry", new Callable<String>() {
-            public String call() {
-                String strProValue = "hello " + "jerry" + "!";
-                return strProValue;
-            }
-        });
-        System.out.println("jerry value : " + resultVal);
-
-        resultVal = cache.get("peida", new Callable<String>() {
-            public String call() {
-                String strProValue = "hello " + "peida" + "!";
-                return strProValue;
-            }
-        });
-        System.out.println("peida value : " + resultVal);
-    }
-
 }
