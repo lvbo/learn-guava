@@ -18,7 +18,7 @@ public class BaseEncodingTest {
     @Test
     public void encodeDecodeTest() throws Exception {
         File file = new File("src/main/resources/sample.pdf");
-        byte[] bytes = Files.toByteArray(file);
+        byte[] bytes = Files.asByteSource(file).read();
         BaseEncoding baseEncoding = BaseEncoding.base64();
         String encoded = baseEncoding.encode(bytes);
         assertThat(Pattern.matches("[A-Za-z0-9+/=]+",encoded),is(true));

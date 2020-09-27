@@ -1,5 +1,6 @@
 package io.github.lvbo.learn.guava.concurrency;
 
+import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -23,7 +24,7 @@ public class FutureCallbackTest {
         });
 
         FutureCallbackImpl callback = new FutureCallbackImpl();
-//        Futures.addCallback(futureTask, callback);
+        Futures.addCallback(futureTask, callback, executorService);
         callback.getCallbackResult();
     }
 }

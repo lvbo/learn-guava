@@ -22,10 +22,7 @@ public class FuturesTest {
         });
 
         FutureCallbackSample callback = new FutureCallbackSample();
-//        Futures.addCallback(futureTask, callback);
-//        ListenableFuture<String> lf = Futures.transform(futureTask, new AsyncFuntionSample());
-//        ListenableFuture<String> dd = Futures.withFallback(lf, new FutureFallbackImpl());
-//        System.out.println(dd.get());
+        Futures.addCallback(futureTask, callback, executorService);
     }
 }
 

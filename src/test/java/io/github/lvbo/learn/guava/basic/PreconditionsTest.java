@@ -84,11 +84,11 @@ public class PreconditionsTest {
         }
     }
 
-    public static void getPersonByPrecondition(int age,String neme)throws Exception{
-        Preconditions.checkNotNull(neme, "nemeΪnull");
-        Preconditions.checkArgument(neme.length()>0, "neme\'\'");
+    public static void getPersonByPrecondition(int age,String name)throws Exception{
+        Preconditions.checkNotNull(name, "nemeΪnull");
+        Preconditions.checkArgument(name.length()>0, "neme\'\'");
         Preconditions.checkArgument(age>0, "age");
-        System.out.println("a person age:"+age+",neme:"+neme);
+        System.out.println("a person age:"+age+",neme:"+name);
 
     }
 
