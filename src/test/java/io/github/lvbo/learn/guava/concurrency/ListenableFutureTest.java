@@ -30,16 +30,8 @@ public class ListenableFutureTest {
     @Test
     public void testListenableFuture() {
         ListeningExecutorService executorService = MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(5));
-        ListenableFuture<String> listenableFuture = executorService.submit(new Callable<String>() {
-            public String call() throws Exception {
-                return null;
-            }
-        });
+        ListenableFuture<String> listenableFuture = executorService.submit(() -> null);
 
-        listenableFuture.addListener(new Runnable() {
-            public void run() {
-//                methodToRunOnFutureTaskCompletion();
-            }
-        }, executorService);
+        listenableFuture.addListener(() -> {}, executorService);
     }
 }

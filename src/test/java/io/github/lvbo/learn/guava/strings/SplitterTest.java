@@ -3,6 +3,10 @@ package io.github.lvbo.learn.guava.strings;
 import com.google.common.base.Splitter;
 import org.junit.Test;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class SplitterTest {
@@ -23,5 +27,17 @@ public class SplitterTest {
         Splitter.MapSplitter mapSplitter = Splitter.on("#").withKeyValueSeparator("=");
         Map<String,String> splitMap = mapSplitter.split(startString);
         System.out.println(splitMap);
+    }
+
+    @Test
+    public void testA() throws ParseException {
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+//        try {
+            Date date = formatter.parse("2023-12-2");
+        System.out.println(date);
+//            return sDate.equals(formatter.format(date));
+//        } catch (Exception e) {
+//            return false;
+//        }
     }
 }
